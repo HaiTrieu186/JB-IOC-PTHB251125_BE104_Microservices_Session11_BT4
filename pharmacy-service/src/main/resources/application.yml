@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: pharmacy-service
+
+  #    # Cau hinh Kafka
+  #    # Producer
+  #    kafka:
+  #      bootstrap-servers: localhost:9092
+  #      producer:
+  #        # Du lieu gui di dinh kem voi key - value (tuan tu hoa du lieu dc gui di)
+  #        key-serializer: org.apache.kafka.common.serialization.StringSerializer
+  ##        value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+  #        value-serializer: org.apache.kafka.common.serialization.StringSerializer
+  data:
+    redis:
+      port: 6379
+      host: localhost # phải thay bằng tên service
+#        connect-timeout:
+#        password:
+  cache:
+    type: redis
+    redis:
+      time-to-live: 60m #60 phút
+server:
+  port: 8081
